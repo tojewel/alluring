@@ -12,6 +12,7 @@ public class Rester {
 
     public Rester() {
         try {
+
             JAXBContext jc = JAXBContext.newInstance(TestCaseResult.class);
 
             // Create the Marshaller Object using the JaxB Context
