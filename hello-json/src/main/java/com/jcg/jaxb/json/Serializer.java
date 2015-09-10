@@ -8,6 +8,7 @@ import ru.yandex.qatools.allure.model.TestCaseResult;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -43,16 +44,18 @@ public class Serializer {
     }
 
     public String toJson(Object dataObject) {
-        return null; // marshallers.get(dataObject.getClass()).ma
-    }
-
-    public void shoot(TestCaseResult testCaseResult) {
+        StringWriter sw = new StringWriter();
         try {
-            System.out.println("\n\n" + ReflectionToStringBuilder.toString(testCaseResult,
-                    ToStringStyle.MULTI_LINE_STYLE));
-            marshallers.get(testCaseResult.getClass()).marshal(testCaseResult, System.out);
+            marshallers.get(dataObject.getClass()).marshal(dataObject, sw);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
+        return sw.toString();
+
+    }
+
+    public void shoot(TestCaseResult testCaseResult) {
+        System.out.println("\n\n" + ReflectionToStringBuilder.toString(testCaseResult, ToStringStyle.MULTI_LINE_STYLE));
+        System.out.print(toJson(testCaseResult));
     }
 }
