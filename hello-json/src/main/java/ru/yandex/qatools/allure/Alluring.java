@@ -1,13 +1,13 @@
 package ru.yandex.qatools.allure;
 
-import com.jcg.jaxb.json.Rester;
+import com.jcg.jaxb.json.Serializer;
 import ru.yandex.qatools.allure.events.*;
 import ru.yandex.qatools.allure.experimental.LifecycleListener;
 import ru.yandex.qatools.allure.model.TestCaseResult;
 
 public class Alluring extends LifecycleListener {
     private TestCaseResult testCaseResult;
-    private Rester rester = new Rester();
+    private Serializer serializer = new Serializer();
 
     Allure allure() {
         return Allure.LIFECYCLE;
@@ -19,6 +19,6 @@ public class Alluring extends LifecycleListener {
     }
 
     public void fire(TestCaseFinishedEvent event) {
-        rester.shoot(testCaseResult);
+        serializer.shoot(testCaseResult);
     }
 }
