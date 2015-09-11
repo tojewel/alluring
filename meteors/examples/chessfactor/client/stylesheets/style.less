@@ -1,0 +1,74 @@
+// Footer
+@footer-height: 70px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif /*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */;
+  background: #FCFCFC url(/imgs/bg.jpg) repeat;
+  margin: 0px;
+  /* Margin bottom by footer height */
+  margin-bottom: @footer-height;
+  padding: 0px;
+  color: #555555;
+  min-width: 320px;
+  padding-top: 70px;
+}
+
+#content {
+}
+
+#footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: @footer-height;
+  > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+.navbar-overwrite {
+  border-bottom: 0px;
+  background: -webkit-linear-gradient(#DFDFDF, #fcfcfc); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#DFDFDF, #fcfcfc); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#DFDFDF, #fcfcfc); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#DFDFDF, #fcfcfc); /* Standard syntax */
+}
+
+.pagehead {
+  position: relative;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.pagehead-nav {
+  float: right;
+  margin-bottom: -20px;
+}
+
+.pagehead-nav-item {
+  float: left;
+  padding: 3px 9px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+.pagehead-nav-item.selected {
+  color: #333;
+  border-bottom: 2px solid #d26911;
+}
+
+.table-img {
+  width: 28px;
+  margin: -10px 0px;
+}
+
+textarea {
+  resize: none;
+}

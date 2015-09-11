@@ -1,0 +1,15 @@
+<template name="masterLayout">
+    {{> yield region='nav'}}
+    {{> watchingGames}}
+    <div class="container">
+        {{> pagehead}}
+        <div class="row">
+            <div class="col-sm-8">
+                {{> yield}}
+            </div>
+            <div class="col-sm-4">
+                {{> notifications}}
+            </div>
+        </div>
+    </div>
+</template>

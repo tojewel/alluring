@@ -1,0 +1,31 @@
+<template name="clubs">
+    <table  class="table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Duration</th>
+            <th>White</th>
+            <th>Black</th>
+            <th>FEN</th>
+            <th>Waching</th>
+            <th>Wach</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each allLiveGames}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>Infinity</td>
+                <td>{{white}}</td>
+                <td>{{black}}</td>
+                <td>{{fen}}</td>
+                <td>{{watching}}</td>
+                <td>
+                    <input type="button" value="Watch"/>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+

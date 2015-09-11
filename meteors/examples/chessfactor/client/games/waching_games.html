@@ -1,0 +1,26 @@
+<template name="watchingGames">
+    <div class="container">
+        <div class=" navbar-fixed-bottom">
+            <div class="tabbable tabs-below task-bar">
+                <div class="tab-content">
+                    {{#each watchingGames}}
+                        <div class="tab-pane active" id="{{_id}}">
+                            {{> gameboard}}
+                        </div>
+                    {{/each}}
+                </div>
+                <ul id="gamesTab" class="nav nav-tabs">
+                    {{#each watchingGames}}
+                        <li>
+                            <a href="#{{_id}}" role="tab" data-toggle="tab">
+                                <img class="img-rounded table-img" src="img/me.jpg">
+                                <img class="img-rounded table-img" src="img/me.jpg">
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</template>

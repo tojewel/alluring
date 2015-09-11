@@ -1,0 +1,27 @@
+<template name="games">
+    <table class="table table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Duration</th>
+            <th>White</th>
+            <th>Black</th>
+            <th>Waching</th>
+            <th>Wach</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each allLiveGames}}
+            <tr>
+                <td>Infinity</td>
+                <td>{{white}}</td>
+                <td>{{black}}</td>
+                <td>{{watching}}</td>
+                <td>
+                    <input type="button" value="Watch" class="btn btn-default btn-xs"/>
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</template>
+

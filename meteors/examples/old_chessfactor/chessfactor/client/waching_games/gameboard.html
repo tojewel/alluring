@@ -1,0 +1,28 @@
+<template name="gameboard">
+    <div style="display: none">{{fen}}</div>
+    <div class="gameboard" style="width: 300px; float: left; margin-right: 10px">
+        <div id="board-{{id}}" ></div>
+        <table>
+            <tr>
+                <td>#</td>
+                <td>{{_id}}</td>
+            </tr>
+            <tr>
+                <td>White</td>
+                <td>{{white}}</td>
+            </tr>
+            <tr>
+                <td>Black</td>
+                <td>{{black}}</td>
+            </tr>
+            <!--<tr>-->
+                <!--<td>FEN</td>-->
+                <!--<td>{{fen}}</td>-->
+            <!--</tr>-->
+            <tr>
+                <td>Done</td>
+                <td><input type="button" value="Done"/></td>
+            </tr>
+        </table>
+    </div>
+</template>

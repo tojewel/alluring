@@ -1,0 +1,27 @@
+<head>
+    <title>ChessFactor!</title>
+</head>
+
+<template name="home">
+
+    <!--{{> conversation}}-->
+    <br/>
+    {{> watchingGames}}
+
+    {{#each myMessages}}
+        <div>
+            {{from}} --> {{to}} : {{msg}}
+            <input type="button" value="Yes"/>
+            <input type="button" value="No"/>
+        </div>
+    {{/each}}
+
+    {{> players}}
+
+    <br/>
+
+    {{> games}}
+
+    <div style="clear:both"></div>
+    <br/>
+</template>

@@ -1,0 +1,66 @@
+<head>
+    <title>ChessFactor!</title>
+</head>
+
+<template name="home">
+    <!--{{> conversation}}-->
+<br/>
+    {{> watchingGames}}
+
+    <br/>
+
+    {{#each myMessages}}
+    <div>
+        {{from}} --> {{to}} : {{msg}}
+        <input type="button" value="Yes"/>
+        <input type="button" value="No"/>
+    </div>
+    {{/each}}
+
+    <br/>
+
+    {{> players}}
+
+    <div style="clear:both"></div>
+
+    <br/>
+
+    {{> games}}
+
+    <br/>
+</template>
+
+<template name="player">
+    <h1>Welcome to Player!</h1>
+</template>
+
+<template name="games">
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Duration</th>
+            <th>White</th>
+            <th>Black</th>
+            <th>FEN</th>
+            <th>Waching</th>
+            <th>Wach</th>
+        </tr>
+        {{#each allLiveGames}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>Infinity</td>
+            <td>{{white}}</td>
+            <td>{{black}}</td>
+            <td>{{fen}}</td>
+            <td>{{watching}}</td>
+            <td>
+                <input type="button" value="Watch"/>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</template>
+
+<template name="game">
+    <h1>Welcome to GAME!</h1>
+</template>

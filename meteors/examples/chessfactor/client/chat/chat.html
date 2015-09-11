@@ -1,0 +1,54 @@
+<template name="chat">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-comment"></span> Chat
+
+                        <div class="btn-group dropdown-menu-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </button>
+                            <ul class="dropdown-menu slidedown">
+                                <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-refresh">
+                            </span>Refresh</a></li>
+                                <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
+                            </span>Available</a></li>
+                                <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
+                            </span>Busy</a></li>
+                                <li><a href="http://www.jquery2dotnet.com"><span
+                                        class="glyphicon glyphicon-time"></span>
+                                    Away</a></li>
+                                <li class="divider"></li>
+                                <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
+                                    Sign Out</a></li>
+                            </ul>
+                        </div>
+                        <div class="pull-right">
+                            <span class="cross glyphicon glyphicon-remove"></span>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <ul class="chat">
+                            {{> chat_message}}
+                            {{> chat_message_me}}
+                            {{> chat_message}}
+                            {{> chat_message_me}}
+                            {{> chat_message}}
+                            {{> chat_message_me}}
+                            {{> chat_message}}
+                        </ul>
+                    </div>
+
+                    <div class="panel-footer">
+                        <input id="btn-input" type="text" class="form-control input-md"
+                               placeholder="Type your message here...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

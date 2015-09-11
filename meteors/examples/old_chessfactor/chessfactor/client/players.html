@@ -1,0 +1,24 @@
+<template name="players">
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Play</th>
+            <th>Talk</th>
+        </tr>
+        {{#each players}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{profile.name}}</td>
+            <td>
+                {{#if not_me}}
+                    <input type="button" value="Play"/>
+                {{/if}}
+            </td>
+            <td>
+                <input type="button" value="Talk"/>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</template>
