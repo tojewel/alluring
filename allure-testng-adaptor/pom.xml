@@ -24,7 +24,7 @@
 
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>hello-json</artifactId>
+            <artifactId>allure-to-server</artifactId>
             <version>1.4.18-SNAPSHOT</version>
         </dependency>
 

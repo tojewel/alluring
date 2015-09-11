@@ -39,7 +39,7 @@
         <module>allure-bundle</module>
         <module>allure-commandline</module>
         <module>allure-report-preview</module>
-        <module>hello-json</module>
+        <module>allure-to-server</module>
         <module>allure-testng-example</module>
     </modules>
 
