@@ -1,0 +1,72 @@
+{
+  "hash" : "9ae4a52f46fbba0c959575303f697deb73e72d63",
+  "data" : [ {
+    "statistic" : {
+      "total" : 256,
+      "passed" : 112,
+      "pending" : 16,
+      "canceled" : 32,
+      "failed" : 80,
+      "broken" : 16
+    },
+    "time" : {
+      "start" : 1441938099871,
+      "stop" : 1442022711279,
+      "duration" : 84611408
+    },
+    "name" : "total",
+    "type" : "TOTAL"
+  }, {
+    "name" : "defects",
+    "type" : "DEFECTS",
+    "data" : [ {
+      "count" : 32,
+      "message" : "AssertionError: \nExpected: is <2>\n     but: was <1>",
+      "status" : "FAILED"
+    }, {
+      "count" : 32,
+      "message" : "AssertionError: \nExpected: is <2>\n     but: was <3>",
+      "status" : "FAILED"
+    }, {
+      "count" : 16,
+      "message" : "AssertionError: This test should be failed",
+      "status" : "FAILED"
+    }, {
+      "count" : 16,
+      "message" : "IllegalStateException: The path to the driver executable must be set by the phantomjs.binary.path capability/system property/PATH variable; for more information, see https://github.com/ariya/phantomjs/wiki. The latest version can be downloaded from http://phantomjs.org/download.html",
+      "status" : "BROKEN"
+    } ]
+  }, {
+    "name" : "xunit",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Surefire suite : Surefire test",
+      "statistic" : {
+        "total" : 256,
+        "passed" : 112,
+        "pending" : 16,
+        "canceled" : 32,
+        "failed" : 80,
+        "broken" : 16
+      }
+    } ]
+  }, {
+    "name" : "behaviors",
+    "type" : "TITLE_STATISTICS",
+    "data" : [ {
+      "title" : "Without feature",
+      "statistic" : {
+        "total" : 256,
+        "passed" : 112,
+        "pending" : 16,
+        "canceled" : 32,
+        "failed" : 80,
+        "broken" : 16
+      }
+    } ]
+  }, {
+    "name" : "environment",
+    "type" : "KEY_VALUE",
+    "data" : [ ]
+  } ]
+}

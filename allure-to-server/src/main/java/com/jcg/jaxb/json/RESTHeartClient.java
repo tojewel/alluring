@@ -74,9 +74,8 @@ public class RESTHeartClient {
                 .onSuccess(new OnSuccess<HttpResponse>() {
                     @Override
                     public void onSuccess(HttpResponse result) throws Throwable {
-                        System.out.println("Successful: " + httpRequest);
-                        System.out.println("result.status(): " + result.status());
-                        System.out.println("result.entity(): " + ReflectionToStringBuilder.toString(result.entity()));
+                        System.out.println("Successful(" + result.status() + "): " + httpRequest);
+
                     }
                 }, materializer.executionContext());
 

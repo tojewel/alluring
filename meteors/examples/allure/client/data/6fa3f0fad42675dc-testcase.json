@@ -1,0 +1,53 @@
+{
+  "uid" : "6fa3f0fad42675dc",
+  "name" : "svgAttachmentTest",
+  "title" : "Svg attachment test",
+  "time" : {
+    "start" : 1442019884702,
+    "stop" : 1442019884718,
+    "duration" : 16
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "7487ce8f2743aebf",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Sample svg attachment",
+    "source" : "777740a5-02c3-4def-9c70-896655ddc05d-attachment.svg",
+    "type" : "image/svg+xml",
+    "size" : 964,
+    "uid" : "b3c19afa8244fa79"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Abduls-MBP.home"
+  }, {
+    "name" : "thread",
+    "value" : "2246@Abduls-MBP.home.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

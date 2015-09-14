@@ -1,0 +1,53 @@
+{
+  "uid" : "228f971607147a66",
+  "name" : "csvAttachmentTest",
+  "title" : "Csv attachment test",
+  "time" : {
+    "start" : 1441938843232,
+    "stop" : 1441938843237,
+    "duration" : 5
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "7487ce8f2743aebf",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Sample csv attachment",
+    "source" : "d704ab2d-68f3-4874-8cff-4caec1c433f5-attachment.csv",
+    "type" : "text/csv",
+    "size" : 161,
+    "uid" : "c62b24e14fc5da51"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Abduls-MBP.home"
+  }, {
+    "name" : "thread",
+    "value" : "576@Abduls-MBP.home.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

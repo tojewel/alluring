@@ -1,0 +1,1095 @@
+{
+  "defectsList" : [ {
+    "title" : "Product defects",
+    "status" : "FAILED",
+    "defects" : [ {
+      "uid" : "f636cc9aefcd9e21",
+      "failure" : {
+        "message" : "AssertionError: This test should be failed",
+        "stackTrace" : "java.lang.AssertionError: This test should be failed\n\tat org.testng.Assert.fail(Assert.java:94)\n\tat my.company.SimpleTest.failedTest(SimpleTest.java:57)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:497)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:714)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:767)\n\tat org.testng.TestRunner.run(TestRunner.java:617)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:334)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:240)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1123)\n\tat org.testng.TestNG.run(TestNG.java:1031)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)\n"
+      },
+      "testCases" : [ {
+        "uid" : "34e9511bfa6df0af",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1441938842604,
+          "stop" : 1441938842953,
+          "duration" : 349
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "96b890ae816fb1bb",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442020746378,
+          "stop" : 1442020746592,
+          "duration" : 214
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "b266b5cb448d440",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1441939151731,
+          "stop" : 1441939152104,
+          "duration" : 373
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "bb033e646fac7ad0",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019630772,
+          "stop" : 1442019631009,
+          "duration" : 237
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "45c78fba23feed05",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019841726,
+          "stop" : 1442019841941,
+          "duration" : 215
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9350813b5ffefca0",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019288059,
+          "stop" : 1442019288302,
+          "duration" : 243
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "aacf70e5c55d39af",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442022710837,
+          "stop" : 1442022711082,
+          "duration" : 245
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "370eefaad435bdad",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1441938424048,
+          "stop" : 1441938424348,
+          "duration" : 300
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "441de917834df054",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019456567,
+          "stop" : 1442019456783,
+          "duration" : 216
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "54b95423f357a580",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019678948,
+          "stop" : 1442019679176,
+          "duration" : 228
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "457a057a772ba649",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019884452,
+          "stop" : 1442019884671,
+          "duration" : 219
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "74cb431177c6aeee",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442020294240,
+          "stop" : 1442020294462,
+          "duration" : 222
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9551da4f313818a9",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019535025,
+          "stop" : 1442019535248,
+          "duration" : 223
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "65d7f84798b7280e",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1441938100166,
+          "stop" : 1441938100340,
+          "duration" : 174
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "2060f5e3896ca9fe",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1442019491365,
+          "stop" : 1442019491601,
+          "duration" : 236
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "237552389d0b0eed",
+        "name" : "failedTest",
+        "title" : "Failed test",
+        "time" : {
+          "start" : 1441939364927,
+          "stop" : 1441939365271,
+          "duration" : 344
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    }, {
+      "uid" : "d973d45f1fadd9ce",
+      "failure" : {
+        "message" : "AssertionError: \nExpected: is <2>\n     but: was <1>",
+        "stackTrace" : "java.lang.AssertionError: \nExpected: is <2>\n     but: was <1>\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat my.company.SimpleTest.parametrizedTest(SimpleTest.java:93)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:497)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:714)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:767)\n\tat org.testng.TestRunner.run(TestRunner.java:617)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:334)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:240)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1123)\n\tat org.testng.TestNG.run(TestNG.java:1031)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)\n"
+      },
+      "testCases" : [ {
+        "uid" : "14c77140e68367ae",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1441938843058,
+          "stop" : 1441938843071,
+          "duration" : 13
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "e27f3deeda05e534",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1441938843118,
+          "stop" : 1441938843128,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9a5ba038fbaf8d1a",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442020746648,
+          "stop" : 1442020746655,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "1b0f48d4697fc2f6",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442020746690,
+          "stop" : 1442020746697,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "b7bc244cf7c5a1fc",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1441939152251,
+          "stop" : 1441939152270,
+          "duration" : 19
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "f7470e164821adcb",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1441939152334,
+          "stop" : 1441939152341,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "b5809f8988dd9456",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019631068,
+          "stop" : 1442019631078,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "296f6760ffe0cd4d",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019631124,
+          "stop" : 1442019631130,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "fa2cd7ee3486645e",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019842005,
+          "stop" : 1442019842016,
+          "duration" : 11
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "990dcba128e1d961",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019842058,
+          "stop" : 1442019842066,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "73e5f59596525a6c",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019288385,
+          "stop" : 1442019288394,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "b973c868523a514d",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019288439,
+          "stop" : 1442019288447,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "81bd9dc4f6ffddfb",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442022711138,
+          "stop" : 1442022711149,
+          "duration" : 11
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "f9f4c31b81babfe0",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442022711200,
+          "stop" : 1442022711207,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "fa2730cda631ebb9",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1441938424392,
+          "stop" : 1441938424402,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "85dd1844a81d711f",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1441938424421,
+          "stop" : 1441938424427,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "52837acc9a2f908b",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019456837,
+          "stop" : 1442019456848,
+          "duration" : 11
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "2721833e7616c097",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019456892,
+          "stop" : 1442019456899,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9d6b68d7b5188a7c",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019679247,
+          "stop" : 1442019679255,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "f345636899b84d39",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019679299,
+          "stop" : 1442019679305,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "ec450b8dcb64f7e4",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019884739,
+          "stop" : 1442019884748,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "c82e4ef9d8d01b23",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019884794,
+          "stop" : 1442019884802,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "747de573023e1517",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442020294518,
+          "stop" : 1442020294525,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "928972eef3f4e23",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442020294568,
+          "stop" : 1442020294573,
+          "duration" : 5
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "c7a4905a1e38655f",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019535322,
+          "stop" : 1442019535335,
+          "duration" : 13
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "6a0dbdcdeeb27f75",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019535367,
+          "stop" : 1442019535375,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "40633c74a9b38f99",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1441938100377,
+          "stop" : 1441938100386,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "54fe1a134a03f60b",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1441938100397,
+          "stop" : 1441938100400,
+          "duration" : 3
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "10155806920868f8",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1442019491658,
+          "stop" : 1442019491671,
+          "duration" : 13
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "1d37effe07460c2",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1442019491702,
+          "stop" : 1442019491708,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "e4a37e276fc535e",
+        "name" : "parametrizedTest[Long-long parameter value,1,2]",
+        "title" : "Parametrized test [Long-long parameter value,1,2]",
+        "time" : {
+          "start" : 1441939365361,
+          "stop" : 1441939365372,
+          "duration" : 11
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "d392ae28a5481641",
+        "name" : "parametrizedTest[1]",
+        "title" : "Parametrized test [1]",
+        "time" : {
+          "start" : 1441939365457,
+          "stop" : 1441939365464,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    }, {
+      "uid" : "41c2e5a1e4c8e703",
+      "failure" : {
+        "message" : "AssertionError: \nExpected: is <2>\n     but: was <3>",
+        "stackTrace" : "java.lang.AssertionError: \nExpected: is <2>\n     but: was <3>\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)\n\tat org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)\n\tat my.company.SimpleTest.parametrizedTest(SimpleTest.java:93)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:497)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:714)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:767)\n\tat org.testng.TestRunner.run(TestRunner.java:617)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:334)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:240)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1123)\n\tat org.testng.TestNG.run(TestNG.java:1031)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)\n"
+      },
+      "testCases" : [ {
+        "uid" : "fe9f214766761401",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1441938843097,
+          "stop" : 1441938843106,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "195fff625492a923",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1441938843166,
+          "stop" : 1441938843178,
+          "duration" : 12
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "5b8ee20387414070",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442020746675,
+          "stop" : 1442020746682,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "4df3363ddd163a66",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442020746715,
+          "stop" : 1442020746721,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "8ab82490d35f630",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1441939152306,
+          "stop" : 1441939152317,
+          "duration" : 11
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "da4ca110b3da9338",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1441939152371,
+          "stop" : 1441939152377,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "438f7f4e7a5f45c8",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019631100,
+          "stop" : 1442019631110,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "dcbc08632ca90643",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019631152,
+          "stop" : 1442019631161,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "3043dcaa6dbc404f",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019842039,
+          "stop" : 1442019842048,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "dd0af7aabf88970c",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019842091,
+          "stop" : 1442019842099,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "fb0e5eee6abedb28",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019288420,
+          "stop" : 1442019288428,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "677e873e75e3c9f2",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019288471,
+          "stop" : 1442019288479,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9a0af8e37d5f213c",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442022711177,
+          "stop" : 1442022711187,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "9b48ddd300fe1238",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442022711226,
+          "stop" : 1442022711233,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "fb7c263b572c139b",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1441938424409,
+          "stop" : 1441938424417,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "afa058043e08c3da",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1441938424431,
+          "stop" : 1441938424435,
+          "duration" : 4
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "15d09be7c5f58a62",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019456874,
+          "stop" : 1442019456882,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "c30ab1b25caab162",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019456919,
+          "stop" : 1442019456926,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "dbd805557834cc4b",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019679281,
+          "stop" : 1442019679288,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "1606c3da6ad81cf7",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019679325,
+          "stop" : 1442019679330,
+          "duration" : 5
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "5f95e80089686ac3",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019884776,
+          "stop" : 1442019884785,
+          "duration" : 9
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "21bf9c43eb42d4e6",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019884825,
+          "stop" : 1442019884835,
+          "duration" : 10
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "b29a373e4b4421c0",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442020294552,
+          "stop" : 1442020294558,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "477f5f3554f93a1f",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442020294594,
+          "stop" : 1442020294600,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "8bf7aaac08ef4c9a",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019535353,
+          "stop" : 1442019535360,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "5d5cd3772001fa42",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019535399,
+          "stop" : 1442019535407,
+          "duration" : 8
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "8fa090c3b7201a99",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1441938100391,
+          "stop" : 1441938100395,
+          "duration" : 4
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "540a33e75d22252b",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1441938100404,
+          "stop" : 1441938100407,
+          "duration" : 3
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "52c5af0238b8a48d",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1442019491689,
+          "stop" : 1442019491695,
+          "duration" : 6
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "ea236f14992e0631",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1442019491722,
+          "stop" : 1442019491729,
+          "duration" : 7
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "43e4dc0a6d20103d",
+        "name" : "parametrizedTest[,3,4]",
+        "title" : "Parametrized test [,3,4]",
+        "time" : {
+          "start" : 1441939365419,
+          "stop" : 1441939365433,
+          "duration" : 14
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      }, {
+        "uid" : "f25459ad155ea122",
+        "name" : "parametrizedTest[3]",
+        "title" : "Parametrized test [3]",
+        "time" : {
+          "start" : 1441939365493,
+          "stop" : 1441939365507,
+          "duration" : 14
+        },
+        "severity" : "NORMAL",
+        "status" : "FAILED"
+      } ]
+    } ]
+  }, {
+    "title" : "Test defects",
+    "status" : "BROKEN",
+    "defects" : [ {
+      "uid" : "7a5394e4d1b93dce",
+      "failure" : {
+        "message" : "IllegalStateException: The path to the driver executable must be set by the phantomjs.binary.path capability/system property/PATH variable; for more information, see https://github.com/ariya/phantomjs/wiki. The latest version can be downloaded from http://phantomjs.org/download.html",
+        "stackTrace" : "java.lang.IllegalStateException: The path to the driver executable must be set by the phantomjs.binary.path capability/system property/PATH variable; for more information, see https://github.com/ariya/phantomjs/wiki. The latest version can be downloaded from http://phantomjs.org/download.html\n\tat com.google.common.base.Preconditions.checkState(Preconditions.java:176)\n\tat org.openqa.selenium.phantomjs.PhantomJSDriverService.findPhantomJS(PhantomJSDriverService.java:237)\n\tat org.openqa.selenium.phantomjs.PhantomJSDriverService.createDefaultService(PhantomJSDriverService.java:182)\n\tat org.openqa.selenium.phantomjs.PhantomJSDriver.<init>(PhantomJSDriver.java:96)\n\tat my.company.SearchTest.setUp(SearchTest.java:19)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:497)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)\n\tat org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)\n\tat org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:653)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:767)\n\tat org.testng.TestRunner.run(TestRunner.java:617)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:334)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:240)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1123)\n\tat org.testng.TestNG.run(TestNG.java:1031)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:205)\n\tat org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:108)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)\n"
+      },
+      "testCases" : [ {
+        "uid" : "456911f6a2e94e4d",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1441938842562,
+          "stop" : 1441938842563,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "391fbeb28b93560",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442020746341,
+          "stop" : 1442020746342,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "cb0c957172eafa84",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1441939151674,
+          "stop" : 1441939151676,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "5f5a1e307ed6395c",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019630722,
+          "stop" : 1442019630723,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "3e68485674c1ad77",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019841699,
+          "stop" : 1442019841699,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "60871d725040e043",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019288026,
+          "stop" : 1442019288027,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "430d2aa3f39dd5bd",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442022710796,
+          "stop" : 1442022710797,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "c99c718062ba590c",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1441938424040,
+          "stop" : 1441938424042,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "6666aa40e22c8c31",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019456525,
+          "stop" : 1442019456526,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "c4d2658089c4aefb",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019678891,
+          "stop" : 1442019678892,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "95a852bdaed8d5e",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019884408,
+          "stop" : 1442019884410,
+          "duration" : 2
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "e6db741c9506240",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442020294200,
+          "stop" : 1442020294201,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "caad8f4a3db13740",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019534997,
+          "stop" : 1442019534998,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "bb1ecefddd7d8026",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1441938100158,
+          "stop" : 1441938100159,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "da80b2e04d217923",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1442019491326,
+          "stop" : 1442019491327,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "babebb257e587528",
+        "name" : "setUp",
+        "title" : "Set up",
+        "time" : {
+          "start" : 1441939364862,
+          "stop" : 1441939364863,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,53 @@
+{
+  "uid" : "3d5d955a0c17144b",
+  "name" : "simpleTestWithAttachments",
+  "title" : "Simple test with attachments",
+  "time" : {
+    "start" : 1442022711241,
+    "stop" : 1442022711246,
+    "duration" : 5
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "7487ce8f2743aebf",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "makeAttach",
+    "source" : "2ad7d664-bc86-4d4e-a77b-52976a7e781d-attachment.txt",
+    "type" : "text/plain",
+    "size" : 12,
+    "uid" : "16a050804768a59f"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Abduls-MBP.home"
+  }, {
+    "name" : "thread",
+    "value" : "2367@Abduls-MBP.home.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}
