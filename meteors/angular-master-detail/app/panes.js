@@ -19,6 +19,7 @@ angular.module('allure.pane', [])
         function Pane(elem) {
             this.elem = elem;
         }
+
         Pane.prototype.setPosition = function (left, width) {
             this.elem.css({left: left + '%', width: width + '%'});
         };
@@ -31,28 +32,51 @@ angular.module('allure.pane', [])
             require: '^panes',
             restrict: 'E',
             transclude: true,
-            scope: { title: '@' },
+            scope: {
+                title: '@',
+                onclose: '@'
+            },
             replace: true,
             templateUrl: 'pane.html',
 
             link: function (scope, elem, attrs, PanesCtrl) {
                 var pane = new Pane(elem);
 
+                scope.show = true;
+                scope.panesClr = PanesCtrl;
+
+                scope.expanded = false;
                 pane.isExpanded = function () {
-                    return scope.$eval(attrs.paneExpanded);
+                    return scope.expanded;
                 };
 
                 PanesCtrl.addPane(pane);
 
-                scope.$watch(attrs.paneExpanded, function (expanded, oldExpanded) {
-                    if (expanded !== oldExpanded) {
-                        PanesCtrl.updatePositions();
-                    }
-                });
+                scope.destroy = function () {
+                    scope.show = true;
+                    PanesCtrl.removePane(pane);
+                }
 
                 scope.$on('$destroy', function () {
+                    console.log("destroying... ")
                     PanesCtrl.removePane(pane);
                 });
+            },
+
+            controller: function ($scope) {
+                $scope.expand = function () {
+                    $scope.expanded = true;
+                    $scope.panesClr.updatePositions();
+                }
+
+                $scope.collapse = function () {
+                    $scope.expanded = false;
+                    $scope.panesClr.updatePositions();
+                }
+
+                $scope.close = function () {
+                    $scope.destroy();
+                }
             }
         };
     })
@@ -69,6 +93,7 @@ angular.module('allure.pane', [])
             this.updatePositions();
         };
         this.updatePositions = function () {
+            console.log("updating possition...")
             panes.forEach(setPanePosition);
         };
 
@@ -81,10 +106,10 @@ angular.module('allure.pane', [])
         }
 
         function setPanePosition(pane) {
-            var index = panes.indexOf(pane),
-                expanded = pane.isExpanded(),
-                offset = 5 * index,
-                width = (expanded ? 100 : 50) - offset;
+            var index = panes.indexOf(pane);
+            var expanded = pane.isExpanded();
+            var offset = 5 * index;
+            var width = (expanded ? 100 : 50) - offset;
 
             pane.elem[index === panes.length - 1 ? 'addClass' : 'removeClass']('pane_col_last');
             pane.elem[index === 0 ? 'addClass' : 'removeClass']('pane_col_first');

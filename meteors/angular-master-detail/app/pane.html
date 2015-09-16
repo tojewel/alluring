@@ -1,13 +1,13 @@
-<div class="pane_col" pane-expanded="true">
+<div class="pane_col" ng-show="show">
     <div class="pane_overlay clickable"></div>
     <div class="pane_content">
-        <h3 class="pane__header title-status-{{defect.type|lowercase}}">
+        <h3 class="pane__header">
             <div class="pane__header_controls pull-right">
-                <span class="fa fa-expand clickable" tooltip="EXPAND" ui-sref="defects.defect.expanded"></span>
-                <span class="fa fa-compress clickable" tooltip="COLLAPSE" ui-sref="defects.defect"></span>
-                <span class="fa fa-close clickable" tooltip="CLOSE" ui-sref="defects"></span>
+                <span class="fa fa-expand clickable" tooltip="EXPAND" ng-click="expand()" ng-show="!expanded"></span>
+                <span class="fa fa-compress clickable" tooltip="COLLAPSE"  ng-click="collapse()" ng-show="expanded"></span>
+                <span class="fa fa-close clickable" tooltip="CLOSE" ng-click="close()"></span>
             </div>
-            Defect
+            {{title}}
         </h3>
         <div ng-transclude></div>
     </div>

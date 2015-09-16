@@ -1,5 +1,5 @@
-HTTrack3.48-21 launched on Mon, 14 Sep 2015 09:13:06 at http://angular-meteor.com/tutorials/angular1/*
-(httrack http://angular-meteor.com/tutorials/angular1/* )
+HTTrack3.48-21 launched on Tue, 15 Sep 2015 09:18:25 at http://angular-meteor.com/
+(httrack http://angular-meteor.com/ )
 
 Information, Warnings and Errors reported for this mirror:
 note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
@@ -7,5 +7,5 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 	do not share these files/folders if you want these information to remain private
 
 
-HTTrack Website Copier/3.48-21 mirror complete in 1 seconds : 2 links scanned, 1 files written (2792 bytes overall), 1 files updated [5080 bytes received at 5080 bytes/sec], 63 bytes transferred using HTTP compression in 1 files, ratio 100%
+HTTrack Website Copier/3.48-21 mirror complete in 21 seconds : 5 links scanned, 4 files written (2275640 bytes overall) [494694 bytes received at 23556 bytes/sec], 2272377 bytes transferred using HTTP compression in 3 files, ratio 21%, 1.2 requests per connection
 (No errors, 0 warnings, 0 messages)
