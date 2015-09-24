@@ -12,6 +12,8 @@ import ru.yandex.qatools.allure.model.TestSuiteResult;
  */
 public class TestSuiteFinishedEvent extends AbstractTestSuiteFinishedEvent {
 
+    private TestSuiteResult testSuite;
+
     /**
      * Constructs an new event with specified uid
      *
@@ -28,7 +30,11 @@ public class TestSuiteFinishedEvent extends AbstractTestSuiteFinishedEvent {
      */
     @Override
     public void process(TestSuiteResult testSuite) {
+        this.testSuite = testSuite;
         testSuite.setStop(System.currentTimeMillis());
     }
 
+    public TestSuiteResult getTestSuite() {
+        return testSuite;
+    }
 }

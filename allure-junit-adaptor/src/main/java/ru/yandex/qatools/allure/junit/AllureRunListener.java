@@ -91,7 +91,6 @@ public class AllureRunListener extends RunListener {
         getLifecycle().fire(new TestCaseFinishedEvent());
     }
 
-
     public void testSuiteFinished(String uid) {
         getLifecycle().fire(new TestSuiteFinishedEvent(uid));
     }

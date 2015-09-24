@@ -2,6 +2,7 @@ package ru.yandex.qatools.allure;
 
 import ru.yandex.qatools.allure.config.AllureConfig;
 import ru.yandex.qatools.allure.config.AllureModelUtils;
+import ru.yandex.qatools.allure.config.AllureRun;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.ClearTestStorageEvent;
 import ru.yandex.qatools.allure.events.RemoveAttachmentsEvent;
@@ -45,11 +46,14 @@ public class Allure {
     private final TestSuiteStorage testSuiteStorage = new TestSuiteStorage();
 
     private final ListenersNotifier notifier = new ListenersNotifier();
+    private final AllureRun allureRun;
 
     /**
      * Package private. Use Allure.LIFECYCLE singleton
      */
     Allure() {
+        notifier.runStarted(allureRun = new AllureRun());
+
         Runtime.getRuntime().addShutdownHook(new Thread(
                 new AllureShutdownHook(testSuiteStorage.getStartedSuites())
         ));

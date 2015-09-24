@@ -1,35 +1,24 @@
 package ru.yandex.qatools.allure;
 
 import com.jcg.jaxb.json.RESTHeartClient;
-import lombok.extern.java.Log;
 import ru.yandex.qatools.allure.events.TestCaseFinishedEvent;
 import ru.yandex.qatools.allure.events.TestCaseStartedEvent;
+import ru.yandex.qatools.allure.events.TestSuiteFinishedEvent;
 import ru.yandex.qatools.allure.experimental.LifecycleListener;
 import ru.yandex.qatools.allure.model.TestCaseResult;
-import ru.yandex.qatools.allure.model.TestSuiteResult;
 
-
-@Log
 public class AllureEventSender extends LifecycleListener {
-
 
     Allure allure() {
         return Allure.LIFECYCLE;
     }
 
-    // Suite
+    // FIXME Suits will not be saved in future.. all the information will be injected in the TestCaseResult
 
-    private TestSuiteResult testSuite;
-
-//    @Override
-//    public void fire(TestSuiteEvent event) {
-//        testSuite = allure().getTestSuiteStorage().get(event.getUid());
-//    }
-//
-//    @Override
-//    public void fire(TestSuiteFinishedEvent event) {
-//        restHeartClient.save(testSuite);
-//    }
+    @Override
+    public void fire(TestSuiteFinishedEvent event) {
+        RESTHeartClient.getInstance().save(event.getTestSuite());
+    }
 
     // Test
 
@@ -42,8 +31,6 @@ public class AllureEventSender extends LifecycleListener {
 
     @Override
     public void fire(TestCaseFinishedEvent event) {
-        System.out.println("Saving(this=" + hashCode() + " " + testCaseResult.hashCode() + "): " + testCaseResult.getName());
-//        new RuntimeException("Saving: " + testCaseResult.getName()).printStackTrace(System.out);
         RESTHeartClient.getInstance().save(testCaseResult);
     }
 }

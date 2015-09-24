@@ -1,5 +1,6 @@
 package ru.yandex.qatools.allure.experimental;
 
+import ru.yandex.qatools.allure.config.AllureRun;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.ClearTestStorageEvent;
 import ru.yandex.qatools.allure.events.StepEvent;
@@ -45,6 +46,7 @@ import ru.yandex.qatools.allure.events.TestSuiteFinishedEvent;
  * <p/>
  * All listener methods will be invoked after event processing. Do not change given events, it can affect others
  * listeners.
+ *
  * @author Dmitry Baev charlie@yandex-team.ru
  *         Date: 26.05.14
  */
@@ -110,5 +112,13 @@ public abstract class LifecycleListener {
      * Called when Allure clear current test case context.
      */
     public void fire(ClearTestStorageEvent event) { // NOSONAR
+    }
+
+    public void runStarted(AllureRun allureRun) {
+
+    }
+
+    public void runEnded(AllureRun allureRun) {
+
     }
 }
