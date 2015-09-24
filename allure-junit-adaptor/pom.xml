@@ -11,6 +11,14 @@
     <name>Allure jUnit Adaptor</name>
 
     <dependencies>
+
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-to-server</artifactId>
+            <version>1.4.18-SNAPSHOT</version>
+        </dependency>
+
+
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-java-aspects</artifactId>

@@ -1,7 +1,5 @@
 package com.jcg.jaxb.json;
 
-import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 import ru.yandex.qatools.allure.model.TestCaseResult;
 
@@ -11,18 +9,15 @@ import javax.xml.bind.Marshaller;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Function;
 
 public class Serializer {
-    private final Map<Class<?>, Marshaller> marshallers = new HashMap<Class<?>, Marshaller>() {
+    private final Map<Class<?>, Marshaller> marshallers = new HashMapPlus<>(new Function<Class<?>, Marshaller>() {
         @Override
-        public Marshaller get(Object key) {
-            Marshaller marshaller = super.get(key);
-            if (marshaller == null) {
-                put((Class<?>) key, marshaller = createMarshaller((Class) key));
-            }
-            return marshaller;
+        public Marshaller apply(Class<?> aClass) {
+            return createMarshaller(aClass);
         }
-    };
+    });
 
     public Serializer() {
         createMarshaller(TestCaseResult.class);
@@ -51,11 +46,5 @@ public class Serializer {
             e.printStackTrace();
         }
         return sw.toString();
-
-    }
-
-    public void shoot(TestCaseResult testCaseResult) {
-        System.out.println("\n" + ReflectionToStringBuilder.toString(testCaseResult, ToStringStyle.MULTI_LINE_STYLE));
-        System.out.println(toJson(testCaseResult));
     }
 }

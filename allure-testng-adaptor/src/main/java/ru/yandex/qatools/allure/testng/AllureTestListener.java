@@ -9,7 +9,7 @@ import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.internal.IResultListener;
 import ru.yandex.qatools.allure.Allure;
-import ru.yandex.qatools.allure.Alluring;
+import ru.yandex.qatools.allure.AllureEventSender;
 import ru.yandex.qatools.allure.annotations.Parameter;
 import ru.yandex.qatools.allure.config.AllureModelUtils;
 import ru.yandex.qatools.allure.events.AddParameterEvent;
@@ -64,7 +64,7 @@ public class AllureTestListener implements IResultListener, ISuiteListener {
 
     @Override
     public void onStart(ITestContext iTestContext) {
-        lifecycle.addListener(new Alluring());
+        lifecycle.addListener(new AllureEventSender());
 
         getLifecycle().fire(new TestSuiteStartedEvent(
                 getSuiteUid(iTestContext), getCurrentSuiteTitle(iTestContext)

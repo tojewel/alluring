@@ -7,6 +7,7 @@ import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 import org.junit.runner.notification.RunListener;
 import ru.yandex.qatools.allure.Allure;
+import ru.yandex.qatools.allure.AllureEventSender;
 import ru.yandex.qatools.allure.config.AllureModelUtils;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.TestCaseCanceledEvent;
@@ -31,8 +32,14 @@ public class AllureRunListener extends RunListener {
     private Allure lifecycle = Allure.LIFECYCLE;
 
     private final Map<String, String> suites = new HashMap<>();
+    private boolean added = false;
 
     public void testSuiteStarted(Description description) {
+        if(!added) {
+            added = true;
+            lifecycle.addListener(new AllureEventSender());
+        }
+
         String uid = generateSuiteUid(description.getClassName());
 
         TestSuiteStartedEvent event = new TestSuiteStartedEvent(uid, description.getClassName());
