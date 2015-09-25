@@ -1,6 +1,6 @@
 package ru.yandex.qatools.allure.experimental;
 
-import ru.yandex.qatools.allure.config.AllureRun;
+import ru.yandex.qatools.allure.model.Execution;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.ClearTestStorageEvent;
 import ru.yandex.qatools.allure.events.StepEvent;
@@ -114,11 +114,15 @@ public abstract class LifecycleListener {
     public void fire(ClearTestStorageEvent event) { // NOSONAR
     }
 
-    public void runStarted(AllureRun allureRun) {
+    public void executionStarted(Execution execution) {
 
     }
 
-    public void runEnded(AllureRun allureRun) {
+    public void executionEnded(Execution execution) {
+
+    }
+
+    public void update(Execution execution) {
 
     }
 }

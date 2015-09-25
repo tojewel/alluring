@@ -7,14 +7,13 @@ import akka.http.javadsl.OutgoingConnection;
 import akka.http.javadsl.model.HttpHeader;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
-import akka.http.javadsl.model.headers.EntityTag;
-import akka.http.javadsl.model.headers.EntityTagRange;
-import akka.http.javadsl.model.headers.IfMatch;
+import akka.http.javadsl.model.headers.Authorization;
+import akka.http.javadsl.model.headers.RawHeader;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import akka.stream.javadsl.Sink;
 import akka.stream.javadsl.Source;
-import lombok.extern.java.Log;
+import ru.yandex.qatools.allure.model.Execution;
 import ru.yandex.qatools.allure.model.TestCaseResult;
 import ru.yandex.qatools.allure.model.TestSuiteResult;
 import scala.concurrent.Future;
@@ -33,13 +32,13 @@ public class RESTHeartClient {
 
     // DB related info, Will come from outside
     private final String database = "testdb";
-    private final Class<?>[] tables = {TestCaseResult.class, TestSuiteResult.class};
+    private final Class<?>[] tables = {TestCaseResult.class, TestSuiteResult.class, Execution.class};
 
     private Serializer serializer = new Serializer();
 
     private static RESTHeartClient instance = new RESTHeartClient();
 
-    public static RESTHeartClient getInstance() {
+    public static RESTHeartClient get() {
         return instance;
     }
 
@@ -47,6 +46,7 @@ public class RESTHeartClient {
         system = ActorSystem.create();
         materializer = ActorMaterializer.create(system);
         connectionFlow = Http.get(system).outgoingConnection("localhost", 8080);
+
 
         // ddd();
     }
@@ -72,6 +72,7 @@ public class RESTHeartClient {
     class ObjectStatus {
         private String etag;
         private Object dataObject;
+        private boolean savingInProgress = true;
 
         public void setEtag(String etag) {
             this.etag = etag;
@@ -89,8 +90,12 @@ public class RESTHeartClient {
             return dataObject;
         }
 
-        public boolean isSaved() {
-            return etag != null;
+        public void setSavingInProgress(boolean savingInProgress) {
+            this.savingInProgress = savingInProgress;
+        }
+
+        public boolean isSavingInProgress() {
+            return savingInProgress;
         }
     }
 
@@ -98,38 +103,31 @@ public class RESTHeartClient {
 
         // FIXME MAJOR PROBLEM WITH THREADING
         // This thread and akka returning thread is different. resolve race conditions
-
         synchronized (dataObject) {
             ObjectStatus objectStatus = status.get(dataObject.hashCode());
 
             // New object
             if (objectStatus == null) {
-                System.out.println("New object");
                 status.put(dataObject.hashCode(), objectStatus = new ObjectStatus());
             }
 
             // First saving in progress...
-            else if (objectStatus.getEtag() == null) {
+            else if (objectStatus.isSavingInProgress()) {
                 System.out.println("First saving in progress...");
                 objectStatus.setPending(dataObject);
                 return;
             }
 
-            final HttpRequest httpRequest = HttpRequest
+            HttpRequest httpRequest = HttpRequest
                     .POST("/" + database + "/" + dataObject.getClass().getSimpleName())
-                    .withEntity(APPLICATION_JSON.toContentType(), serializer.toJson(dataObject));
+                    .withEntity(APPLICATION_JSON.toContentType(), serializer.toJson(dataObject))
+                    .addHeader(Authorization.basic("a", "a"));
 
-            // Update? or New object
-            if (objectStatus.isSaved()) {
-                System.out.println("Update");
-                EntityTag entityTag = EntityTag.create(objectStatus.getEtag(), false);
-                IfMatch ifMatch = IfMatch.create(EntityTagRange.create(entityTag));
-                httpRequest.addHeader(ifMatch);
+            if (objectStatus.getEtag() != null) {
+                httpRequest = httpRequest.addHeader(RawHeader.create("If-Match", objectStatus.getEtag()));
             }
 
-            for (HttpHeader httpHeader : httpRequest.getHeaders()) {
-                System.out.println(httpHeader.name() + "=" + httpHeader.value());
-            }
+            final HttpRequest httpRequest2 = httpRequest;
 
             Source.single(httpRequest)
                     .via(connectionFlow)
@@ -137,12 +135,11 @@ public class RESTHeartClient {
                     .onSuccess(new OnSuccess<HttpResponse>() {
                         @Override
                         public void onSuccess(HttpResponse result) throws Throwable {
-                            System.out.println("<<<RESPONSE (" + result.status() + "): " + httpRequest.getUri());
-
+                            System.out.println("<<<RESPONSE (" + result.status() + "): " + httpRequest2.getUri());
                             synchronized (dataObject) {
                                 ObjectStatus objectStatus = status.get(dataObject.hashCode());
-                                objectStatus.setEtag("" + result.getHeader("etag"));
-
+                                objectStatus.setSavingInProgress(false);
+                                objectStatus.setEtag(result.getHeader("etag").get().value());
                                 if (objectStatus.getPending() != null) {
                                     save(objectStatus.getPending());
                                     objectStatus.setPending(null);

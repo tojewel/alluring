@@ -1,0 +1,747 @@
+17:49:58.769 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+17:49:58.778 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+17:49:58.779 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+17:49:58.780 [main] DEBUG org.restheart.Configuration - parameters group mongo-credentials not specified in the configuration file, using its default value null
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+17:49:58.780 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+17:49:58.781 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+17:49:58.781 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+17:49:58.964 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+17:49:58.967 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+17:49:58.968 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+17:49:59.164 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+17:49:59.243 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+17:49:59.243 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+17:49:59.243 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+17:49:59.248 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+17:49:59.249 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+17:49:59.249 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+17:49:59.250 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+17:49:59.250 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+17:49:59.250 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+17:49:59.250 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+17:49:59.251 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+17:49:59.251 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+17:49:59.251 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+17:49:59.251 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+17:49:59.252 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+17:49:59.253 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+17:49:59.253 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+17:49:59.254 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+17:49:59.254 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+17:49:59.254 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+17:49:59.254 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+17:49:59.254 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+17:49:59.267 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+17:49:59.319 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-1858299200977259403
+17:49:59.322 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+17:49:59.323 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+17:49:59.324 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+17:49:59.393 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+18:00:51.060 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+18:00:51.061 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+18:00:51.061 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+18:00:51.068 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+18:00:51.068 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+18:00:51.073 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+18:00:56.318 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+18:00:56.326 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+18:00:56.327 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+18:00:56.328 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+18:00:56.329 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+18:00:56.329 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+18:00:56.530 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+18:00:56.533 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+18:00:56.534 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+18:00:56.671 [main] ERROR org.restheart.db.PropsFixer - eorro looking for dbs and collections with missing _properties. note that requests to dbs and collections with no _properties result on NOT_FOUND
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.getDatabaseNames(Mongo.java:373) ~[restheart.jar:0.10.4]
+	at org.restheart.db.DbsDAO.getDatabaseNames(DbsDAO.java:399) ~[restheart.jar:0.10.4]
+	at org.restheart.db.PropsFixer.fixAllMissingProps(PropsFixer.java:133) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.startServer(Bootstrapper.java:319) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.main(Bootstrapper.java:211) [restheart.jar:0.10.4]
+18:00:56.702 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+18:00:56.782 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+18:00:56.783 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+18:00:56.783 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+18:00:56.789 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+18:00:56.789 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+18:00:56.790 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+18:00:56.790 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+18:00:56.791 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+18:00:56.791 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+18:00:56.791 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+18:00:56.792 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+18:00:56.793 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+18:00:56.793 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+18:00:56.793 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+18:00:56.796 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+18:00:56.796 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+18:00:56.796 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+18:00:56.797 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+18:00:56.798 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+18:00:56.805 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+18:00:56.858 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-6305472909243077258
+18:00:56.861 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+18:00:56.862 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+18:00:56.863 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+18:00:56.933 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+20:21:17.514 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+20:21:17.515 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+20:21:17.515 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+20:21:17.517 [Thread-2] ERROR org.restheart.Bootstrapper - Error flushing and closing the MongoDB client
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:246) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.fsync(Mongo.java:670) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.stopServer(Bootstrapper.java:378) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.access$000(Bootstrapper.java:90) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper$1.run(Bootstrapper.java:337) [restheart.jar:0.10.4]
+20:21:17.518 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:21:17.519 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+20:21:17.523 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+20:21:20.306 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+20:21:20.313 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+20:21:20.314 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+20:21:20.315 [main] DEBUG org.restheart.Configuration - parameters group mongo-credentials not specified in the configuration file, using its default value null
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+20:21:20.315 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+20:21:20.316 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+20:21:20.317 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+20:21:20.317 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+20:21:20.317 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:21:20.500 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+20:21:20.504 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+20:21:20.504 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+20:21:20.692 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+20:21:20.771 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+20:21:20.771 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+20:21:20.771 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+20:21:20.778 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+20:21:20.778 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+20:21:20.779 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+20:21:20.779 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+20:21:20.779 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+20:21:20.779 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+20:21:20.779 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:21:20.780 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+20:21:20.780 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+20:21:20.780 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+20:21:20.781 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+20:21:20.782 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+20:21:20.782 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:21:20.782 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+20:21:20.782 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+20:21:20.783 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+20:21:20.783 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+20:21:20.783 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+20:21:20.783 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+20:21:20.783 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+20:21:20.790 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+20:21:20.843 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-4778859484916805086
+20:21:20.846 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+20:21:20.847 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+20:21:20.848 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+20:21:20.918 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+20:25:45.449 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+20:25:45.449 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+20:25:45.449 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+20:25:45.456 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:25:45.457 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+20:25:45.462 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+20:31:20.216 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+20:31:20.224 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+20:31:20.225 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+20:31:20.225 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+20:31:20.225 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+20:31:20.225 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+20:31:20.225 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+20:31:20.226 [main] DEBUG org.restheart.Configuration - parameters group mongo-credentials not specified in the configuration file, using its default value null
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+20:31:20.226 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+20:31:20.227 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+20:31:20.228 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:31:20.411 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+20:31:20.415 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+20:31:20.416 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+20:31:20.606 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+20:31:20.684 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+20:31:20.685 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+20:31:20.686 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+20:31:20.691 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+20:31:20.691 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+20:31:20.692 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+20:31:20.692 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+20:31:20.692 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+20:31:20.692 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+20:31:20.692 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:31:20.693 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+20:31:20.693 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+20:31:20.693 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+20:31:20.693 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+20:31:20.694 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:31:20.695 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+20:31:20.695 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+20:31:20.695 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+20:31:20.695 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+20:31:20.696 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+20:31:20.696 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+20:31:20.696 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+20:31:20.703 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+20:31:20.756 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-4611191991339717430
+20:31:20.759 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+20:31:20.760 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+20:31:20.760 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+20:31:20.831 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+20:32:46.238 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+20:32:46.239 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+20:32:46.239 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+20:32:46.245 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:32:46.245 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+20:32:46.250 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+20:32:48.772 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+20:32:48.780 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+20:32:48.781 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+20:32:48.782 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+20:32:48.783 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+20:32:48.783 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:32:48.979 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+20:32:48.982 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+20:32:48.983 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+20:32:49.122 [main] ERROR org.restheart.db.PropsFixer - eorro looking for dbs and collections with missing _properties. note that requests to dbs and collections with no _properties result on NOT_FOUND
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.getDatabaseNames(Mongo.java:373) ~[restheart.jar:0.10.4]
+	at org.restheart.db.DbsDAO.getDatabaseNames(DbsDAO.java:399) ~[restheart.jar:0.10.4]
+	at org.restheart.db.PropsFixer.fixAllMissingProps(PropsFixer.java:133) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.startServer(Bootstrapper.java:319) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.main(Bootstrapper.java:211) [restheart.jar:0.10.4]
+20:32:49.155 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+20:32:49.232 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+20:32:49.232 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+20:32:49.233 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+20:32:49.238 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+20:32:49.239 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+20:32:49.240 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+20:32:49.240 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+20:32:49.240 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+20:32:49.240 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+20:32:49.241 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:32:49.241 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+20:32:49.242 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+20:32:49.243 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+20:32:49.244 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+20:32:49.245 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+20:32:49.245 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:32:49.245 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+20:32:49.245 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+20:32:49.246 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+20:32:49.246 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+20:32:49.246 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+20:32:49.246 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+20:32:49.246 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+20:32:49.253 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+20:32:49.308 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-6531145404314489806
+20:32:49.310 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+20:32:49.311 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+20:32:49.312 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+20:32:49.383 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+20:33:05.366 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+20:33:05.367 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+20:33:05.367 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+20:33:05.370 [Thread-2] ERROR org.restheart.Bootstrapper - Error flushing and closing the MongoDB client
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:246) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.fsync(Mongo.java:670) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.stopServer(Bootstrapper.java:378) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.access$000(Bootstrapper.java:90) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper$1.run(Bootstrapper.java:337) [restheart.jar:0.10.4]
+20:33:05.370 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:33:05.371 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+20:33:05.376 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+20:33:15.375 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+20:33:15.384 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+20:33:15.385 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+20:33:15.386 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+20:33:15.387 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+20:33:15.387 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:33:15.570 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+20:33:15.574 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+20:33:15.575 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+20:33:15.706 [main] ERROR org.restheart.db.PropsFixer - eorro looking for dbs and collections with missing _properties. note that requests to dbs and collections with no _properties result on NOT_FOUND
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.getDatabaseNames(Mongo.java:373) ~[restheart.jar:0.10.4]
+	at org.restheart.db.DbsDAO.getDatabaseNames(DbsDAO.java:399) ~[restheart.jar:0.10.4]
+	at org.restheart.db.PropsFixer.fixAllMissingProps(PropsFixer.java:133) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.startServer(Bootstrapper.java:319) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.main(Bootstrapper.java:211) [restheart.jar:0.10.4]
+20:33:15.740 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+20:33:15.821 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+20:33:15.821 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+20:33:15.822 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+20:33:15.828 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+20:33:15.829 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+20:33:15.829 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+20:33:15.830 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+20:33:15.830 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+20:33:15.830 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+20:33:15.830 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+20:33:15.831 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+20:33:15.832 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+20:33:15.832 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+20:33:15.833 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+20:33:15.833 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+20:33:15.833 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+20:33:15.834 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+20:33:15.834 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+20:33:15.834 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+20:33:15.834 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+20:33:15.835 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+20:33:15.835 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+20:33:15.835 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+20:33:15.842 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+20:33:15.897 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-3637695497654169773
+20:33:15.899 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+20:33:15.900 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+20:33:15.901 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+20:33:15.972 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+20:33:21.350 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+20:33:21.351 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+20:33:21.351 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+20:33:21.354 [Thread-2] ERROR org.restheart.Bootstrapper - Error flushing and closing the MongoDB client
+com.mongodb.CommandFailureException: { "serverUsed" : "127.0.0.1:27017" , "ok" : 0.0 , "code" : 18 , "errmsg" : "Authentication failed."}
+	at com.mongodb.CommandResult.getException(CommandResult.java:76) ~[restheart.jar:0.10.4]
+	at com.mongodb.CommandResult.throwOnError(CommandResult.java:140) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort$SaslAuthenticator.authenticate(DBPort.java:899) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.authenticate(DBPort.java:432) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBPort.checkAuth(DBPort.java:443) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.innerCall(DBTCPConnector.java:289) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBTCPConnector.call(DBTCPConnector.java:269) ~[restheart.jar:0.10.4]
+	at com.mongodb.DBCollectionImpl.find(DBCollectionImpl.java:84) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:320) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:299) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:374) ~[restheart.jar:0.10.4]
+	at com.mongodb.DB.command(DB.java:246) ~[restheart.jar:0.10.4]
+	at com.mongodb.Mongo.fsync(Mongo.java:670) ~[restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.stopServer(Bootstrapper.java:378) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper.access$000(Bootstrapper.java:90) [restheart.jar:0.10.4]
+	at org.restheart.Bootstrapper$1.run(Bootstrapper.java:337) [restheart.jar:0.10.4]
+20:33:21.355 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+20:33:21.355 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+20:33:21.360 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+13:59:04.549 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+13:59:04.559 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+13:59:04.560 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+13:59:04.560 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+13:59:04.560 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+13:59:04.561 [main] DEBUG org.restheart.Configuration - parameters group mongo-credentials not specified in the configuration file, using its default value null
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+13:59:04.561 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+13:59:04.562 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+13:59:04.563 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+13:59:04.563 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+13:59:04.960 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+13:59:04.966 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+13:59:04.967 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+13:59:05.234 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+13:59:05.318 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+13:59:05.318 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+13:59:05.319 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+13:59:05.327 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+13:59:05.327 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+13:59:05.328 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+13:59:05.328 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+13:59:05.328 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+13:59:05.329 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+13:59:05.329 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+13:59:05.329 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+13:59:05.330 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+13:59:05.331 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+13:59:05.331 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+13:59:05.331 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+13:59:05.331 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+13:59:05.331 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+13:59:05.332 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+13:59:05.343 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+13:59:05.408 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-201829685702962252
+13:59:05.411 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+13:59:05.412 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+13:59:05.413 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+13:59:05.507 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************
+14:12:29.339 [Thread-2] INFO  org.restheart.Bootstrapper - Stopping RESTHeart...
+14:12:29.340 [Thread-2] INFO  org.restheart.Bootstrapper - Waiting for pending request to complete (up to 1 minute)...
+14:12:29.340 [Thread-2] INFO  org.restheart.Bootstrapper - Flushing and closing the MongoDB client...
+14:12:29.347 [Thread-2] INFO  org.restheart.Bootstrapper - Removing the pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+14:12:29.347 [Thread-2] INFO  org.restheart.Bootstrapper - Cleaning up temporary directories...
+14:12:29.351 [Thread-2] INFO  org.restheart.Bootstrapper - RESTHeart stopped *********************************************
+14:16:54.644 [main] INFO  org.restheart.Bootstrapper - Starting RESTHeart ********************************************
+14:16:54.652 [main] DEBUG org.restheart.Configuration - paramenter https-listener set to true
+14:16:54.653 [main] DEBUG org.restheart.Configuration - paramenter https-port set to 4443
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter https-host set to 0.0.0.0
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter http-listener set to true
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter http-port set to 8080
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter http-host set to 0.0.0.0
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter ajp-listener set to false
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter ajp-port set to 8009
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter ajp-host set to 0.0.0.0
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter use-embedded-keystore set to true
+14:16:54.654 [main] DEBUG org.restheart.Configuration - parameters group mongo-credentials not specified in the configuration file, using its default value null
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleFileIdentityManager
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter implementation-class set to org.restheart.security.impl.SimpleAccessManager
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter log-file-path set to restheart.log
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter log-level set to DEBUG
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter enable-log-console set to true
+14:16:54.654 [main] DEBUG org.restheart.Configuration - paramenter enable-log-file set to true
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter requests-limit set to 1000
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter local-cache-enabled set to true
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter local-cache-ttl set to 1000
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter io-threads set to 2
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter worker-threads set to 8
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter buffer-size set to 16384
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter buffers-per-region set to 20
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter direct-buffers set to true
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter force-gzip-encoding set to false
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-pool-size set to 100
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-width set to 1000
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-delta set to 100
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-linear-slice-heights set to [4, 2, 1]
+14:16:54.655 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-slice-min-width set to 1000
+14:16:54.656 [main] DEBUG org.restheart.Configuration - paramenter eager-cursor-allocation-random-max-cursors set to 20
+14:16:54.656 [main] DEBUG org.restheart.Configuration - paramenter auth-token-enabled set to true
+14:16:54.656 [main] DEBUG org.restheart.Configuration - paramenter auth-token-ttl set to 15
+14:16:54.656 [main] INFO  org.restheart.Bootstrapper - Creating pid file /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-438267884.pid
+14:16:54.850 [main] INFO  org.restheart.Bootstrapper - RESTHeart version 0.10.4
+14:16:54.854 [main] INFO  org.restheart.Bootstrapper - Initializing MongoDB connection pool to 127.0.0.1:27017 
+14:16:54.854 [main] INFO  org.restheart.Bootstrapper - MongoDB connection pool initialized
+14:16:55.050 [main] INFO  org.restheart.Bootstrapper - Token based authentication enabled with token TTL 15 minutes
+14:16:55.129 [main] INFO  org.restheart.Bootstrapper - HTTPS listener bound at 0.0.0.0:4443
+14:16:55.129 [main] INFO  org.restheart.Bootstrapper - HTTP listener bound at 0.0.0.0:8080
+14:16:55.130 [main] INFO  org.restheart.Bootstrapper - Local cache for db and collection properties enabled
+14:16:55.135 [main] INFO  o.r.handlers.RequestDispacherHandler - Initialize default HTTP handlers:
+14:16:55.135 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( ROOT, GET, org.restheart.handlers.root.GetRootHandler )
+14:16:55.136 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, GET, org.restheart.handlers.database.GetDBHandler )
+14:16:55.136 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PUT, org.restheart.handlers.database.PutDBHandler )
+14:16:55.136 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, DELETE, org.restheart.handlers.database.DeleteDBHandler )
+14:16:55.137 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DB, PATCH, org.restheart.handlers.database.PatchDBHandler )
+14:16:55.137 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, GET, org.restheart.handlers.collection.GetCollectionHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, POST, org.restheart.handlers.collection.PostCollectionHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PUT, org.restheart.handlers.collection.PutCollectionHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, DELETE, org.restheart.handlers.collection.DeleteCollectionHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION, PATCH, org.restheart.handlers.collection.PatchCollectionHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, GET, org.restheart.handlers.document.GetDocumentHandler )
+14:16:55.138 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PUT, org.restheart.handlers.document.PutDocumentHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, DELETE, org.restheart.handlers.document.DeleteDocumentHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( DOCUMENT, PATCH, org.restheart.handlers.document.PatchDocumentHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( COLLECTION_INDEXES, GET, org.restheart.handlers.indexes.GetIndexesHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, PUT, org.restheart.handlers.indexes.PutIndexHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( INDEX, DELETE, org.restheart.handlers.indexes.DeleteIndexHandler )
+14:16:55.139 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, GET, org.restheart.handlers.collection.GetCollectionHandler )
+14:16:55.140 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, POST, org.restheart.handlers.files.PostBucketHandler )
+14:16:55.140 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, PUT, org.restheart.handlers.files.PutBucketHandler )
+14:16:55.140 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILES_BUCKET, DELETE, org.restheart.handlers.files.DeleteBucketHandler )
+14:16:55.141 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, GET, org.restheart.handlers.files.GetFileHandler )
+14:16:55.141 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE_BINARY, GET, org.restheart.handlers.files.GetFileBinaryHandler )
+14:16:55.141 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, PUT, org.restheart.handlers.files.PutFileHandler )
+14:16:55.141 [main] INFO  o.r.handlers.RequestDispacherHandler - putPipedHttpHandler( FILE, DELETE, org.restheart.handlers.files.DeleteFileHandler )
+14:16:55.148 [main] INFO  org.restheart.Bootstrapper - URL / bound to MongoDB resource *
+14:16:55.205 [main] INFO  org.restheart.Bootstrapper - Embedded static resources browser extracted in /var/folders/lk/l859yg616c9cbtgfnt9szgjc0000gn/T/restheart-7872539391666024419
+14:16:55.208 [main] INFO  org.restheart.Bootstrapper - URL /browser bound to static resources browser. access manager: false
+14:16:55.209 [main] INFO  org.restheart.Bootstrapper - URL /_logic/ping bound to application logic handler org.restheart.handlers.applicationlogic.PingHandler. access manager: false
+14:16:55.209 [main] INFO  org.restheart.Bootstrapper - URL /_logic/roles bound to application logic handler org.restheart.handlers.applicationlogic.GetRoleHandler. access manager: false
+14:16:55.282 [main] INFO  org.restheart.Bootstrapper - RESTHeart started **********************************************

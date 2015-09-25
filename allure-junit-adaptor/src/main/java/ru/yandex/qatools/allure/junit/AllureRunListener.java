@@ -1,5 +1,7 @@
 package ru.yandex.qatools.allure.junit;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import org.junit.Ignore;
 import org.junit.internal.AssumptionViolatedException;
 import org.junit.runner.Description;
@@ -35,6 +37,9 @@ public class AllureRunListener extends RunListener {
     private boolean added = false;
 
     public void testSuiteStarted(Description description) {
+//        String desc = ToStringBuilder.reflectionToString(description, ToStringStyle.MULTI_LINE_STYLE);
+//        System.out.println("description=" + desc);
+
         if(!added) {
             added = true;
             lifecycle.addListener(new AllureEventSender());

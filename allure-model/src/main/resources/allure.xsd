@@ -31,9 +31,10 @@
 
     <xs:complexType name="test-case-result">
         <xs:all>
-            <xs:element name="run-id" type="xs:string"/>
+            <xs:element name="_id" type="xs:string"/>
+            <xs:element name="execution-id" type="xs:string"/>
             <xs:element name="package" type="xs:string"/>
-            <xs:element name="test-class" type="xs:string"/>
+            <xs:element name="test-suite" type="xs:string"/>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="title" type="xs:string" minOccurs="0"/>
             <xs:element name="description" type="qa:description" minOccurs="0"/>

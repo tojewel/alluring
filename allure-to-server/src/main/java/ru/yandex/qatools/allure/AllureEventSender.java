@@ -1,6 +1,7 @@
 package ru.yandex.qatools.allure;
 
 import com.jcg.jaxb.json.RESTHeartClient;
+import ru.yandex.qatools.allure.model.Execution;
 import ru.yandex.qatools.allure.events.TestCaseFinishedEvent;
 import ru.yandex.qatools.allure.events.TestCaseStartedEvent;
 import ru.yandex.qatools.allure.events.TestSuiteFinishedEvent;
@@ -17,7 +18,17 @@ public class AllureEventSender extends LifecycleListener {
 
     @Override
     public void fire(TestSuiteFinishedEvent event) {
-        RESTHeartClient.getInstance().save(event.getTestSuite());
+        RESTHeartClient.get().save(event.getTestSuite());
+    }
+
+    @Override
+    public void executionStarted(Execution execution) {
+        RESTHeartClient.get().save(execution);
+    }
+
+    @Override
+    public void update(Execution execution) {
+        RESTHeartClient.get().save(execution);
     }
 
     // Test
@@ -31,6 +42,6 @@ public class AllureEventSender extends LifecycleListener {
 
     @Override
     public void fire(TestCaseFinishedEvent event) {
-        RESTHeartClient.getInstance().save(testCaseResult);
+        RESTHeartClient.get().save(testCaseResult);
     }
 }

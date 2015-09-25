@@ -2,6 +2,7 @@ package ru.yandex.qatools.allure.experimental;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.yandex.qatools.allure.model.Execution;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.ClearTestStorageEvent;
 import ru.yandex.qatools.allure.events.StepEvent;
@@ -97,6 +98,28 @@ public class ListenersNotifier extends LifecycleListener {
         } catch (Exception e) {
             LOGGER.error("iterator.hasNext() failed", e);
             return false;
+        }
+    }
+
+    @Override
+    public void executionStarted(Execution execution) {
+        for (LifecycleListener listener : listeners) {
+            try {
+                listener.executionStarted(execution);
+            } catch (Exception e) {
+                logError(listener, e);
+            }
+        }
+    }
+
+    @Override
+    public void executionEnded(Execution execution) {
+        for (LifecycleListener listener : listeners) {
+            try {
+                listener.executionEnded(execution);
+            } catch (Exception e) {
+                logError(listener, e);
+            }
         }
     }
 
@@ -259,5 +282,17 @@ public class ListenersNotifier extends LifecycleListener {
      */
     public List<LifecycleListener> getListeners() {
         return listeners;
+    }
+
+    @Override
+    public void update(Execution execution) {
+        for (LifecycleListener listener : listeners) {
+            try {
+                listener.update(execution);
+            } catch (Exception e) {
+                logError(listener, e);
+            }
+        }
+
     }
 }

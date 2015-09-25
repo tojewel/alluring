@@ -2,7 +2,7 @@ package ru.yandex.qatools.allure;
 
 import ru.yandex.qatools.allure.config.AllureConfig;
 import ru.yandex.qatools.allure.config.AllureModelUtils;
-import ru.yandex.qatools.allure.config.AllureRun;
+import ru.yandex.qatools.allure.model.Execution;
 import ru.yandex.qatools.allure.events.ClearStepStorageEvent;
 import ru.yandex.qatools.allure.events.ClearTestStorageEvent;
 import ru.yandex.qatools.allure.events.RemoveAttachmentsEvent;
@@ -25,6 +25,8 @@ import ru.yandex.qatools.allure.storages.TestCaseStorage;
 import ru.yandex.qatools.allure.storages.TestSuiteStorage;
 import ru.yandex.qatools.allure.utils.AllureShutdownHook;
 
+import java.util.UUID;
+
 import static ru.yandex.qatools.allure.utils.AllureResultsUtils.writeTestSuiteResult;
 
 /**
@@ -46,17 +48,26 @@ public class Allure {
     private final TestSuiteStorage testSuiteStorage = new TestSuiteStorage();
 
     private final ListenersNotifier notifier = new ListenersNotifier();
-    private final AllureRun allureRun;
+    private Execution execution;
 
     /**
      * Package private. Use Allure.LIFECYCLE singleton
      */
     Allure() {
-        notifier.runStarted(allureRun = new AllureRun());
-
         Runtime.getRuntime().addShutdownHook(new Thread(
                 new AllureShutdownHook(testSuiteStorage.getStartedSuites())
         ));
+    }
+
+    public Execution getExecution() {
+        if(execution == null) {
+            // FIXME Has to be ended somewhere
+
+            notifier.executionStarted(execution = new Execution());
+            System.out.println("Creating execution=" + execution.hashCode());
+
+        }
+        return execution;
     }
 
     /**
@@ -110,12 +121,18 @@ public class Allure {
         stepStorage.get();
 
         TestCaseResult testCase = testCaseStorage.get();
+        testCase.setExecutionId(getExecution().get_id());
+
+        TestSuiteResult testSuite = testSuiteStorage.get(event.getSuiteUid());
+        testCase.setTestSuite(testSuite.getName());
+
         event.process(testCase);
 
-        synchronized (TEST_SUITE_ADD_CHILD_LOCK) {
-            testSuiteStorage.get(event.getSuiteUid()).getTestCases().add(testCase);
-        }
+//        synchronized (TEST_SUITE_ADD_CHILD_LOCK) {
+//            testSuiteStorage.get(event.getSuiteUid()).getTestCases().add(testCase);
+//        }
 
+        testCase.setId(UUID.randomUUID().toString());
         notifier.fire(event);
     }
 
@@ -156,6 +173,8 @@ public class Allure {
         stepStorage.remove();
         testCaseStorage.remove();
 
+        execution.update(testCase);
+        notifier.update(execution);
         notifier.fire(event);
     }
 
